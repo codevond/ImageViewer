@@ -34,7 +34,7 @@ open class GalleryViewController: UIPageViewController, ItemControllerDelegate {
     fileprivate var initialPresentationDone = false
 
     // DATASOURCE/DELEGATE
-    open let itemsDelegate: GalleryItemsDelegate?
+    public let itemsDelegate: GalleryItemsDelegate?
     fileprivate let itemsDataSource: GalleryItemsDataSource
     fileprivate let pagingDataSource: GalleryPagingDataSource
 
@@ -487,7 +487,7 @@ open class GalleryViewController: UIPageViewController, ItemControllerDelegate {
         }
     }
 
-    func removePage(atIndex index: Int, completion: @escaping () -> Void) {
+    public func removePage(atIndex index: Int, completion: @escaping () -> Void) {
 
         // If removing last item, go back, otherwise, go forward
 
