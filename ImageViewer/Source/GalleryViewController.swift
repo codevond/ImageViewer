@@ -20,7 +20,7 @@ open class GalleryViewController: UIPageViewController, ItemControllerDelegate {
     fileprivate var closeButton: UIButton? = UIButton.closeButton()
     fileprivate var seeAllCloseButton: UIButton? = nil
     fileprivate var thumbnailsButton: UIButton? = UIButton.thumbnailsButton()
-    fileprivate var deleteButton: UIButton? = UIButton.deleteButton()
+    open var deleteButton: UIButton? = UIButton.deleteButton()
     fileprivate let scrubber = VideoScrubber()
 
     fileprivate weak var initialItemController: ItemController?
@@ -34,7 +34,7 @@ open class GalleryViewController: UIPageViewController, ItemControllerDelegate {
     fileprivate var initialPresentationDone = false
 
     // DATASOURCE/DELEGATE
-    fileprivate let itemsDelegate: GalleryItemsDelegate?
+    open let itemsDelegate: GalleryItemsDelegate?
     fileprivate let itemsDataSource: GalleryItemsDataSource
     fileprivate let pagingDataSource: GalleryPagingDataSource
 
